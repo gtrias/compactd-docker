@@ -1,0 +1,12 @@
+compactd:
+  build: .
+  restart: always
+  links:
+  - couchdb
+  ports:
+  - 9000
+
+couchdb:
+  image: couchdb
+  ports:
+  - 5984:5984
